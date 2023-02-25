@@ -1,3 +1,4 @@
+import { Cta } from "../Buttons/Cta";
 import { TopBar } from "../TopBar/TopBar";
 
 export function Main() {
@@ -22,11 +23,35 @@ export function Main() {
           </div>
         </section>
 
-        <section id="about" style={{ backgroundColor: "#003b3b", padding: "150px 0" }}></section>
+        <section id="about">
+          <div className="responsive">
+            <div className="side">
+              <h2 className="section-title">Hire</h2>
+              <p>
+                You have a design that you want to turn into a functionnal
+                website ? Check out the services I propose on fiverr !
+              </p>
+            </div>
+            <div className="side">
+              <img
+                src="../../../public/fiverr-cover.webp"
+                alt="Fiverr gig cover"
+              />
+              <Cta
+                linkHref="https://fr.fiverr.com/share/1RaWYz"
+                type="link"
+                target="_blank"
+                img={{path: "../../../public/fiverr-icon.png", alt: "Fiverr icon"}}
+              >
+                See on fiverr
+              </Cta>
+            </div>
+          </div>
+        </section>
 
-        <section id="contact" style={{ padding: "150px 0" }}>
+        <section id="contact">
           <div className="inputs-group">
-          <h2>Send me a message</h2>
+            <h2>Send me a message</h2>
             <div className="input-zone">
               <input type="text" placeholder="Your name" />
             </div>
