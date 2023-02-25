@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { NavItem } from "./Items/NavItem";
 
 export function TopBar() {
   const [isMenuOpened, setMenuOpened] = useState(false);
+  const [hoveredElement, setHoveredElement] = useState<null | number>(null);
 
   return (
     <header className="top-bar">
@@ -20,26 +22,34 @@ export function TopBar() {
         >
           <nav className="tb-nav">
             <ul className="tb-nav-items">
-              <li className="tb-nav-item">
-                <a href="#skills" className="tb-nav-link">
-                  Skills
-                </a>
-              </li>
-              <li className="tb-nav-item">
-                <a href="#hire" className="tb-nav-link">
-                  Hire
-                </a>
-              </li>
-              <li className="tb-nav-item">
-                <a href="#projects" className="tb-nav-link">
-                  Projects
-                </a>
-              </li>
-              <li className="tb-nav-item">
-                <a href="#contact" className="tb-nav-link">
-                  Contact
-                </a>
-              </li>
+              <NavItem
+                name="About"
+                to="#about"
+                setHoveredElement={setHoveredElement}
+                hoveredElement={hoveredElement}
+                id={1}
+              />
+              <NavItem
+                name="Hire"
+                to="#hire"
+                setHoveredElement={setHoveredElement}
+                hoveredElement={hoveredElement}
+                id={2}
+              />
+              <NavItem
+                name="Projects"
+                to="#projects"
+                setHoveredElement={setHoveredElement}
+                hoveredElement={hoveredElement}
+                id={3}
+              />
+              <NavItem
+                name="Contact"
+                to="#contact"
+                setHoveredElement={setHoveredElement}
+                hoveredElement={hoveredElement}
+                id={4}
+              />
             </ul>
           </nav>
           <a

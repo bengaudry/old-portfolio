@@ -1,0 +1,99 @@
+.loader {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: transform 500ms ease-in-out;
+  background-color: teal;
+  transform: translateY(-100%);
+  z-index: 10000;
+}
+
+.loader.loading {
+  transform: translateY(0);
+}
+
+.loader-anim {
+  height: 38px;
+  width: 38px;
+  box-shadow: -40px -40px 0 0.1em #fff,
+    -40px -40px 0 0.1em #fff, -40px -40px 0 0.1em #fff,
+    -40px -40px 0 0.1em #fff;
+  animation: loader-38 3.5s infinite;
+}
+
+@keyframes loader-38 {
+  0% {
+    box-shadow: -40px -40px 0 0.1em #fff,
+      -40px -40px 0 0.1em #fff, -40px -40px 0 0.1em #fff,
+      -40px -40px 0 0.1em #fff;
+  }
+  8.33% {
+    box-shadow: -40px -40px 0 0.1em #fff,
+      40px -40px 0 0.1em #fff, 40px -40px 0 0.1em #fff,
+      40px -40px 0 0.1em #fff;
+  }
+  16.66% {
+    box-shadow: -40px -40px 0 0.1em #fff,
+      40px -40px 0 0.1em #fff, 40px 40px 0 0.1em #fff,
+      40px 40px 0 0.1em #fff;
+  }
+  24.99% {
+    box-shadow: -40px -40px 0 0.1em #fff,
+      40px -40px 0 0.1em #fff, 40px 40px 0 0.1em #fff,
+      -40px 40px 0 0.1em #fff;
+  }
+  33.32% {
+    box-shadow: -40px -40px 0 0.1em #fff,
+      40px -40px 0 0.1em #fff, 40px 40px 0 0.1em #fff,
+      -40px -40px 0 0.1em #fff;
+  }
+  41.65% {
+    box-shadow: 40px -40px 0 0.1em #fff,
+      40px -40px 0 0.1em #fff, 40px 40px 0 0.1em #fff,
+      40px -40px 0 0.1em #fff;
+  }
+  49.98% {
+    box-shadow: 40px 40px 0 0.1em #fff,
+      40px 40px 0 0.1em #fff, 40px 40px 0 0.1em #fff,
+      40px 40px 0 0.1em #fff;
+  }
+  58.31% {
+    box-shadow: -40px 40px 0 0.1em #fff,
+      -40px 40px 0 0.1em #fff, 40px 40px 0 0.1em #fff,
+      -40px 40px 0 0.1em #fff;
+  }
+  66.64% {
+    box-shadow: -40px -40px 0 0.1em #fff,
+      -40px -40px 0 0.1em #fff, 40px 40px 0 0.1em #fff,
+      -40px 40px 0 0.1em #fff;
+  }
+  74.97% {
+    box-shadow: -40px -40px 0 0.1em #fff,
+      40px -40px 0 0.1em #fff, 40px 40px 0 0.1em #fff,
+      -40px 40px 0 0.1em #fff;
+  }
+  83.3% {
+    box-shadow: -40px -40px 0 0.1em #fff,
+      40px 40px 0 0.1em #fff, 40px 40px 0 0.1em #fff,
+      -40px 40px 0 0.1em #fff;
+  }
+  91.63% {
+    box-shadow: -40px -40px 0 0.1em #fff,
+      -40px 40px 0 0.1em #fff, -40px 40px 0 0.1em #fff,
+      -40px 40px 0 0.1em #fff;
+  }
+  100% {
+    box-shadow: -40px -40px 0 0.1em #fff,
+      -40px -40px 0 0.1em #fff, -40px -40px 0 0.1em #fff,
+      -40px -40px 0 0.1em #fff;
+  }
+}
+
+// Stolen on https://codepen.io/vank0/pen/mrRwLg

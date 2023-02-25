@@ -1,0 +1,7 @@
+:root {
+  --body-bg-color-raw: 230, 230, 230;
+  --primary-text-color-raw: 0, 0, 0;
+
+  --body-bg-color: rgb(var(--body-bg-color-raw));
+  --primary-text-color: rgb(var(--primary-text-color-raw));
+}
