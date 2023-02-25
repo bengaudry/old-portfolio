@@ -1,0 +1,100 @@
+.skills-graph-container {
+  display: grid;
+  grid-template-columns: 100px calc(100% - 200px) 100px;
+  gap: 25px;
+  align-items: center;
+}
+
+.skills-graph-btn {
+  background-color: transparent;
+  border: 5px solid #ffffff80;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 300ms;
+
+  img {
+    width: 40px;
+    height: 40px;
+    filter: invert(1);
+    opacity: 0.8;
+  }
+}
+
+#skills-left img {
+  transform: translateX(-2.5px);
+}
+
+#skills-right img {
+  transform: translateX(2.5px);
+}
+
+.skills-graph-scroller {
+  position: relative;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  align-items: center;
+  width: 500px;
+  height: 480px;
+  overflow: hidden;
+}
+
+.skills-graph {
+  border-bottom: 1px solid #fff;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  height: 300px;
+  width: 500px !important;
+  display: inline-flex;
+  margin: 0 auto;
+  left: 100%;
+  transition: left, 600ms ease-in-out;
+  position: absolute;
+}
+
+.skills-graph-progress {
+  background: var(--skill-hov-color);
+  border: 2px solid #ffffff80;
+  border-bottom: 0;
+  width: 40px;
+  opacity: .7;
+  // background: url('/craie.png');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  position: relative;
+  transition: opacity 300ms;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.skills-graph-desc {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  white-space: nowrap;
+  transform: translate(-50%, 170%) rotate(-70deg);
+  color: #fff;
+  font-weight: 600;
+}
+
+.cloud-skills {
+  top: 100vh;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+
+  &:nth-child(1) {
+    top: 100vh;
+  }
+}
+
+.cloud-skill {
+  width: 60%;
+}

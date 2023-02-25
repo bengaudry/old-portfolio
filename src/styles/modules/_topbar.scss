@@ -1,0 +1,128 @@
+.top-bar {
+  position: fixed;
+  width: 100%;
+  padding: 25px 0;
+  z-index: 5;
+  top: 0;
+  transition: top, 1.5s;
+  background: transparent;
+
+  .responsive {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu-toggler {
+  display: none;
+}
+
+.tb-actions {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.scrolling-top-bar {
+  top: -100%;
+  // background: transparent;
+}
+
+.tb-brand {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: rgb(var(--accent-color));
+}
+
+.tb-nav-items {
+  width: max-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tb-cta {
+  width: max-content;
+  text-align: right;
+  justify-self: flex-end;
+
+  img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.tb-nav-link {
+  opacity: 1;
+  display: block;
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+  transition: opacity, transform, 300ms;
+
+  &:hover {
+    transform: translateY(-5px) scale(120%);
+  }
+}
+
+.tb-transp-nav-link {
+  opacity: .4;
+}
+
+@media screen and (max-width: 768px) {
+  .top-bar {
+    backdrop-filter: none;
+    background: rgb(var(--body-bg-color));
+    .responsive {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .menu-toggler {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 0;
+    position: fixed;
+    right: 20px;
+    top: 21.5px;
+    opacity: .4;
+    img {
+      filter: invert(1);
+    }
+  }
+
+  .scrolling-top-bar {
+    backdrop-filter: none;
+  }
+
+  .tb-actions {
+    position: absolute;
+    top: 66.5px;
+    width: 100%;
+    height: max-content;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(var(--accent-color), .4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    backdrop-filter: none;
+    background: rgb(var(--body-bg-color));
+    transition: height, padding, 300ms;
+  }
+
+  .tb-actions-closed {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .tb-cta {
+    font-size: .9rem;
+  }
+}
