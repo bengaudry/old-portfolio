@@ -1,11 +1,17 @@
+* {
+	cursor: none;
+}
+
 body:hover .cursor {
 	opacity: 1;
 }
 
 .cursor {
+	mix-blend-mode: difference;
+	pointer-events: none;
 	display: block;
-	height: 15px;
-	width: 15px;
+	height: 32px;
+	width: 32px;
 	background-color: #fff;
 	border-radius: 9999px;
 	position: fixed;
@@ -14,5 +20,5 @@ body:hover .cursor {
 	left: 0;
 	transform: translate(-7.5px, -7.5px);
 	opacity: 0;
-	transition: opacity, 300ms;
+	transition: opacity 300ms, top 800ms, left 800ms;
 }

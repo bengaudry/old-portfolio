@@ -4,14 +4,22 @@ import { TopBar } from "./modules/TopBar/TopBar";
 import { MousePosition } from "./scripts";
 
 export function App() {
+  const [mousePosition, setMousePosition] = useState<MousePosition>({
+    x: 0,
+    y: 0,
+  });
 
-  const [mousePosition, setMousePosition] = useState<MousePosition>({x: 0, y: 0});
-
-  useEffect(function() {
-    document.addEventListener("mousemove", function(e) {
-      setMousePosition({x: e.clientX, y: e.clientY});
-    })
-  })
+  useEffect(() => {
+    const moveCursor = (e: MouseEvent) => {
+      const x = e.pageX;
+      const y = e.pageY;
+      setMousePosition({ x: x, y: y });
+    };
+    window.addEventListener("mousemove", moveCursor);
+    return () => {
+      window.removeEventListener("mousemove", moveCursor);
+    };
+  }, []);
 
   return (
     <>

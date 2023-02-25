@@ -5,7 +5,9 @@ export function Cursor(position: MousePosition) {
     <div
       className="cursor"
       id="cursor"
-      style={{ left: `${position.x}px`, top: `${position.y}px` }}
+      style={{
+        transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
+      }}
     ></div>
   );
 }
