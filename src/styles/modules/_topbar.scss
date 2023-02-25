@@ -83,7 +83,7 @@
 
   .menu-toggler {
     display: block;
-    width: 20px;
+    width: max-content;
     height: 20px;
     background-color: transparent;
     border: 0;
@@ -113,12 +113,16 @@
     gap: 7px;
     backdrop-filter: none;
     background: rgb(var(--body-bg-color));
-    transition: height, padding, 300ms;
+    background-color: teal;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform, padding, 300ms;
   }
 
   .tb-actions-closed {
-    height: 0;
+    transform: scaleY(0) !important;
     padding: 0;
+    padding-bottom: 20px;
     overflow: hidden;
   }
 

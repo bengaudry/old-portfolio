@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 export function TopBar() {
-
-  const [isMenuOpened, setMenuOpened] = useState(false)
+  const [isMenuOpened, setMenuOpened] = useState(false);
 
   return (
     <header className="top-bar">
@@ -10,10 +9,15 @@ export function TopBar() {
         <div className="tb-brand">
           <a href="#">Ben Gaudry</a>
         </div>
-        <button className="menu-toggler" onClick={() => setMenuOpened(!isMenuOpened)}>
-          <img src="/hamburger.png" alt="Open menu" />
+        <button
+          className="menu-toggler"
+          onClick={() => setMenuOpened(!isMenuOpened)}
+        >
+          <span>MENU</span>
         </button>
-        <div className={`${isMenuOpened ? "" : "tb-actions-closed"} tb-actions`}>
+        <div
+          className={`${isMenuOpened ? "" : "tb-actions-closed"} tb-actions`}
+        >
           <nav className="tb-nav">
             <ul className="tb-nav-items">
               <li className="tb-nav-item">
