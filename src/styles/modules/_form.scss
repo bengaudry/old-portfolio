@@ -1,0 +1,30 @@
+.input-zone {
+  width: 100%;
+}
+
+input[type="text"],
+textarea {
+  display: block;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-bottom-width: 4px;
+  border-radius: 10px;
+  padding: 12px 18px;
+  width: 100% !important;
+}
+
+textarea {
+  height: 150px;
+}
+
+.inputs-group {
+  padding: 50px 20px;
+  width: min(100%, 500px);
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  background-color: aquamarine;
+}

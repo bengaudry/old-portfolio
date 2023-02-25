@@ -14,6 +14,7 @@ html {
   list-style-type: none;
   font-size: .950rem;
   user-select: none;
+  outline: none;
 }
 
 img {
@@ -29,4 +30,8 @@ body {
 
 li {
   font: inherit;
+}
+
+textarea {
+  resize: none;
 }

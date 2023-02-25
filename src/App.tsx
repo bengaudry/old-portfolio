@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Cursor } from "./modules/Cursor/Cursor";
 import { MousePosition } from "./scripts";
 import { Main } from "./modules/Main/Main";
+import { setEffectOnMenuLinks } from "./scripts";
 
 export function App() {
   const [mousePosition, setMousePosition] = useState<MousePosition>({
@@ -11,14 +12,14 @@ export function App() {
 
   const [loaderOpened, setLoaderOpened] = useState(true);
 
+  window.onload = () => {
+    setEffectOnMenuLinks();
+    setTimeout(() => {
+      setLoaderOpened(false)
+    }, 1000);
+  };
+
   useEffect(() => {
-
-    window.onload = function () {
-      window.setTimeout(() => {
-        setLoaderOpened(false)
-      }, 1000)
-    }
-
     const moveCursor = (e: MouseEvent) => {
       const x = e.pageX;
       const y = e.pageY;

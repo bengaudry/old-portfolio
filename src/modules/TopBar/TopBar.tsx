@@ -55,7 +55,7 @@ export function TopBar() {
           <a
             href="https://github.com/bengaudry/"
             target="_blank"
-            className="cta cta-secondary tb-cta"
+            className="tb-cta"
           >
             <img src="/github-mark-white.png" alt="See on GitHub" />
           </a>

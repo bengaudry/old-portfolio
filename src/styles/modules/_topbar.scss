@@ -5,7 +5,7 @@
   z-index: 5;
   top: 0;
   transition: top, 1.5s;
-  background: transparent;
+  background: var(--body-bg-color);
 
   .responsive {
     display: grid;
